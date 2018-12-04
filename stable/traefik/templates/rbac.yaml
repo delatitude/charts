@@ -1,8 +1,4 @@
 {{- if .Values.rbac.enabled }}
-kind: ServiceAccount
-apiVersion: v1
-metadata:
-  name: {{ template "traefik.fullname" . }}
 ---
 kind: ClusterRole
 {{- if semverCompare "^1.8-0" .Capabilities.KubeVersion.GitVersion }}
